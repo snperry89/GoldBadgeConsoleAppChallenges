@@ -1,0 +1,2 @@
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\obj\Debug\01_Cafe_Repository.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\obj\Debug\01_Cafe_Repository.csproj.CoreCompileInputs.cache

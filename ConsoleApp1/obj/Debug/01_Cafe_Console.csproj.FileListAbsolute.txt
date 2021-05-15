@@ -1,0 +1,1 @@
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\obj\Debug\01_Cafe_Console.csproj.CoreCompileInputs.cache
