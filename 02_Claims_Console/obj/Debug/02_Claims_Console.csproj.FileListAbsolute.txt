@@ -1,0 +1,7 @@
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Console\bin\Debug\02_Claims_Console.exe.config
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Console\bin\Debug\02_Claims_Console.exe
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Console\bin\Debug\02_Claims_Console.pdb
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Console\obj\Debug\02_Claims_Console.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Console\obj\Debug\02_Claims_Console.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Console\obj\Debug\02_Claims_Console.exe
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Console\obj\Debug\02_Claims_Console.pdb

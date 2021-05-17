@@ -1,2 +1,7 @@
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\obj\Debug\01_Cafe_Repository.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\obj\Debug\01_Cafe_Repository.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\bin\Debug\01_Cafe_Repository.dll.config
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\bin\Debug\01_Cafe_Repository.dll
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\bin\Debug\01_Cafe_Repository.pdb
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\obj\Debug\01_Cafe_Repository.dll
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\01_Cafe_Repository\obj\Debug\01_Cafe_Repository.pdb

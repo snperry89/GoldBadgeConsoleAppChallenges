@@ -20,10 +20,6 @@ namespace _01_Cafe_Repository
         {
             return _menuItems;
         }
-        //public MenuItem GetMenuItemByDescription(string description)
-        //{
-
-        //}
         public MenuItem GetMenuItemByName(string MealName)
         {
             foreach (MenuItem menuItem in _menuItems)
@@ -44,6 +40,7 @@ namespace _01_Cafe_Repository
                 oldMenuItem.MealName = newMenuItemValues.MealName;
                 oldMenuItem.Description = newMenuItemValues.Description;
                 oldMenuItem.Price = newMenuItemValues.Price;
+                oldMenuItem.Ingredients = newMenuItemValues.Ingredients;
 
                 return true;
             }
@@ -53,9 +50,18 @@ namespace _01_Cafe_Repository
             }
         }
 
-        public bool DeleteExistingMenuItem(string v)
+        public bool DeleteExistingMenuItem(string menuItemToDelete)
         {
-            throw new NotImplementedException();
+            MenuItem itemToDelete = GetMenuItemByName(menuItemToDelete);
+            if (itemToDelete == null)
+            {
+                return false;
+            }
+            else
+            {
+                _menuItems.Remove(itemToDelete);
+                return true;
+            }
         }
     }
 }

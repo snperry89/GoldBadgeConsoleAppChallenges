@@ -49,12 +49,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CafeContentPOCOTests.cs" />
+    <Compile Include="CafeContentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CafeContentRepoTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\01_Cafe_Repository\01_Cafe_Repository.csproj">
+      <Project>{E62C6F9D-F3A6-4A37-A9A2-EDE35FCC13EF}</Project>
+      <Name>01_Cafe_Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConsoleApp1\01_Cafe_Console.csproj">
+      <Project>{f320050c-0092-4047-bfa2-dac7ce97f4da}</Project>
+      <Name>01_Cafe_Console</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,1 +1,11 @@
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\obj\Debug\01_Cafe_Console.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\bin\Debug\01_Cafe_Repository.dll
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\bin\Debug\01_Cafe_Repository.pdb
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\bin\Debug\01_Cafe_Repository.dll.config
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\obj\Debug\01_Cafe_Console.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\obj\Debug\01_Cafe_Console.csproj.CopyComplete
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

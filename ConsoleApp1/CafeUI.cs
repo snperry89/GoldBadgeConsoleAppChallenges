@@ -12,9 +12,10 @@ namespace MenuItem_Console
         private MenuRepository _repo = new MenuRepository();
         public void Run()
         {
+            SeedMenu();
             Menu();
         }
-        private void Menu()
+        public void Menu() /// should this be private?
         {
             bool keepRunning = true;
             while (keepRunning)
@@ -65,7 +66,7 @@ namespace MenuItem_Console
             Console.WriteLine("What is the price of this menu item?");
             newMenuItem.Price = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("What are the ingredients in this menu item?" );
-            //newMenuItem.Ingredients = (Console.ReadLine());
+            newMenuItem.Ingredients = (Console.ReadLine());
         }
 
         private void UpdateExistingMenuItem()
@@ -121,8 +122,25 @@ namespace MenuItem_Console
             List<MenuItem> allMenuItems = _repo.GetMenuItems();
             foreach (MenuItem item in allMenuItems)
             {
+                Console.WriteLine($"Menu Item Number: {item.MealNumber}");
                 Console.WriteLine($"Menu Item: {item.MealName}" );
+                Console.WriteLine($"Price: {item.Price}");
+                Console.WriteLine($"Description: {item.Description}");
+                Console.WriteLine($"Ingredients: {item.Ingredients}");
+                // do i need to display anything else here...check prompt???
             }
+        }
+        private void SeedMenu()
+        {
+            MenuItem First = new MenuItem(1, "FireStarter", "Too Hot to Handle", 4.20, "bun, beef, jalapeno, sriracha chili mayo");
+            MenuItem Second = new MenuItem(2, "This Little Piggy", "Pork, Pork, and More Pork", 5.50, "bun, pork tenderloin, pulled pork, bacon, bacon jam");
+            MenuItem Third = new MenuItem(3, "Chick Filet", "Why....just why?", 30.00, "bun, fried chicken tenders, filet mignon, A1 steak sauce");
+            MenuItem Fourth = new MenuItem(4, "The Bummer", "For Your Vegan Cousin", 0.50, "one un-buttered crouton");
+
+            _repo.AddItemToMenu(First);
+            _repo.AddItemToMenu(Second);
+            _repo.AddItemToMenu(Third);
+            _repo.AddItemToMenu(Fourth);
         }
 
     }
