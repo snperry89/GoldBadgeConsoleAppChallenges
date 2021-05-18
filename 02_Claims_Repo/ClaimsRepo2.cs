@@ -9,6 +9,7 @@ namespace _02_Claims_Repo
     public class ClaimsRepo2
     {
         private readonly Queue<Claims> _claims = new Queue<Claims>();
+        
         //Create
         public bool CreateNewClaim(Claims newClaim)
         {
@@ -22,31 +23,29 @@ namespace _02_Claims_Repo
         {
             return _claims;
         }
-        //Read by value-claimID
-        public Claims GetClaimByID(int claimID)
-        {
-            foreach (Claims claim in _claims)
-            {
-                if (claim.ClaimID == claimID)
-                {
-                    return claim;
-                }
-            }
-            return null;
-        }
         //Update
-        //Delete
-        public bool DequeueClaim(int claimToDequeue)
+        
+        //method to peek in queue
+        public Claims PeekNextClaim()
         {
-            Claims claimToRemove = GetClaimByID(claimToDequeue);
-            if (claimToRemove == null)
+            Claims claimToPeek = _claims.Peek(); 
+
+            return claimToPeek;
+            
+            ///return claim to be displayed takecarenextclaim()
+        }
+        //Delete AKA next claim
+        public bool DequeueClaim(Claims nextClaim)
+        {
+            Claims claimToRemove = nextClaim;
+            if (claimToRemove != null)
             {
-                return false;
+                _claims.Dequeue();
+                return true;
             }
             else
             {
-                _claims.Enqueue(claimToRemove);// shouldnt this be dequeue?
-                return true;
+                return false;
             }
         }
 

@@ -30,24 +30,14 @@ namespace _01_Cafe_Tests
         }
 
         [TestMethod]
-        public void UpdateExistingMenuItem_ShouldReturnNotEqual() //Does this test make sense???
+        public void UpdateExistingMenuItem_ShouldReturnNotEqual() 
         {
-            //_repo.UpdateExistingMenuItem("This Little Piggy", new MenuItem(2, "This Little Piggy 2", "this is still pork", 12.50, "bun, pork, lettuce, tomatoe, mustard, mayo"));
-
             MenuItem newMenuItem = new MenuItem(2, "This Little Piggy 2", "this is still pork", 12.50m, "bun, pork, lettuce, tomatoe, mustard, mayo");
 
             bool updateResult = _repo.UpdateMenuItem("This Little Piggy", newMenuItem);
 
             Assert.AreNotEqual(newMenuItem, updateResult);
         }
-
-        //[DataTestMethod]
-        //public void DeleteExistingMenuItem_ShouldReturnTrue(string originalMenuItem, bool shouldDelete)
-        //{
-        //    bool wasDeleted = _repo.DeleteExistingMenuItem("This Little Piggy");
-
-        //    Assert.IsTrue(wasDeleted); ///works if isFalse, but shouldnt it be IsTrue
-        //}
 
         [TestMethod]
         public void DeleteMenuItem_ShouldReturnTrue()

@@ -15,7 +15,7 @@ namespace MenuItem_Console
             SeedMenu();
             Menu();
         }
-        public void Menu() /// should this be private?
+        private void Menu() 
         {
             bool keepRunning = true;
             while (keepRunning)
@@ -72,14 +72,12 @@ namespace MenuItem_Console
             _repo.AddItemToMenu(newMenuItem);
         }
 
-        public void UpdateExistingMenuItem()
-            /// need to make so that console only recognizes existing menu items
+        private void UpdateExistingMenuItem() // struggling to only make console recognize existing items
         {
             Console.Clear();
             ViewAllMenuItems();
 
             Console.WriteLine("Enter the name of the menu item you would like to update:");
-            // reference getmenuitembyname(), 
             string oldMenuItemName = Console.ReadLine();
             MenuItem newMenuItem = _repo.GetMenuItemByName(oldMenuItemName);
             bool wasUpdated = _repo.UpdateMenuItem(oldMenuItemName, newMenuItem);
@@ -121,27 +119,15 @@ namespace MenuItem_Console
             {
                 Console.WriteLine("Please enter a valid input");
             }
-            // need to set equal to bool to make sure console only recognizes existing menu items??? still not working...
-            //bool wasUpdated = _repo.UpdateMenuItem(oldMenuItemName, newMenuItem);  
-            //if(wasUpdated)
-            //{
-            //    Console.WriteLine("Menu item was successfully updated");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Unable to update menu item...");
-            //}
         }
        
         private void DeleteExistingMenuItem()
         {
             Console.Clear();
             ViewAllMenuItems();
-
             Console.WriteLine("Enter the name of the menu item you would like to delete:");
 
             bool wasDeleted = _repo.DeleteExistingMenuItem(Console.ReadLine());
-
             if (wasDeleted)
             {
                 Console.WriteLine("The menu item was successfully deleted.");
@@ -163,7 +149,6 @@ namespace MenuItem_Console
                 Console.WriteLine($"Price: ${item.Price}");
                 Console.WriteLine($"Description: {item.Description}");
                 Console.WriteLine($"Ingredients: {item.Ingredients}\n");
-                // do i need to display all of this??? check prompt
             }
         }
         private void SeedMenu()
