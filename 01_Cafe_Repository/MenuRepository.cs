@@ -20,11 +20,11 @@ namespace _01_Cafe_Repository
         {
             return _menuItems;
         }
-        public MenuItem GetMenuItemByName(string MealName)
+        public MenuItem GetMenuItemByName(string mealName)
         {
             foreach (MenuItem menuItem in _menuItems)
             {
-                if (menuItem.MealName.ToLower() == MealName.ToLower())
+                if (menuItem.MealName.ToLower() == mealName.ToLower())
                 {
                     return menuItem;
                 }

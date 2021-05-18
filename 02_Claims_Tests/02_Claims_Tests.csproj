@@ -49,9 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClaimsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ClaimsRepoTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -72,44 +72,65 @@ namespace MenuItem_Console
             _repo.AddItemToMenu(newMenuItem);
         }
 
-        private void UpdateExistingMenuItem()
+        public void UpdateExistingMenuItem()
             /// need to make so that console only recognizes existing menu items
         {
             Console.Clear();
             ViewAllMenuItems();
 
             Console.WriteLine("Enter the name of the menu item you would like to update:");
+            // reference getmenuitembyname(), 
             string oldMenuItemName = Console.ReadLine();
-            MenuItem newMenuItem = new MenuItem();
-
-            Console.WriteLine("What is the new name for this item?");
-            newMenuItem.MealName = Console.ReadLine();
-
-            Console.WriteLine("What is the new number for this item?");
-            string mealNumberAsString = Console.ReadLine();
-            int mealNumberAsInt = Convert.ToInt32(mealNumberAsString);
-            newMenuItem.MealNumber = mealNumberAsInt;
-
-            Console.WriteLine("What is the new description for this item?");
-            newMenuItem.Description = Console.ReadLine();
-
-            Console.WriteLine("What is the new price for this item?");
-            string priceAsString = Console.ReadLine();
-            decimal priceAsDecimal = Convert.ToDecimal(priceAsString);
-            newMenuItem.Price = priceAsDecimal;
-
-            Console.WriteLine("What are the new ingredients for this item?");
-            newMenuItem.Ingredients = Console.ReadLine();
-
-            bool wasUpdated = _repo.UpdateMenuItem(oldMenuItemName, newMenuItem);  // need to set equal to bool to make sure console only recognizes existing menu items??? still not working...
-            if(wasUpdated)
+            MenuItem newMenuItem = _repo.GetMenuItemByName(oldMenuItemName);
+            bool wasUpdated = _repo.UpdateMenuItem(oldMenuItemName, newMenuItem);
+            if (newMenuItem != null)
             {
-                Console.WriteLine("Menu item was successfully updated");
+                // set equal to getbyname, pass in arg oldmenuitemname
+                //if newmenuitem !=null, pass on new values, if null please enter valid...
+
+                Console.WriteLine("What is the new name for this item?");
+                newMenuItem.MealName = Console.ReadLine();
+
+                Console.WriteLine("What is the new number for this item?");
+                string mealNumberAsString = Console.ReadLine();
+                int mealNumberAsInt = Convert.ToInt32(mealNumberAsString);
+                newMenuItem.MealNumber = mealNumberAsInt;
+
+                Console.WriteLine("What is the new description for this item?");
+                newMenuItem.Description = Console.ReadLine();
+
+                Console.WriteLine("What is the new price for this item?");
+                string priceAsString = Console.ReadLine();
+                decimal priceAsDecimal = Convert.ToDecimal(priceAsString);
+                newMenuItem.Price = priceAsDecimal;
+
+                Console.WriteLine("What are the new ingredients for this item?");
+                newMenuItem.Ingredients = Console.ReadLine();
+
+                if (wasUpdated)
+                {
+                    Console.WriteLine("Menu item was successfully updated");
+                }
+                else
+                {
+                    Console.WriteLine("Unable to update menu item...");
+                }
+                
             }
             else
             {
-                Console.WriteLine("Unable to update menu item...");
+                Console.WriteLine("Please enter a valid input");
             }
+            // need to set equal to bool to make sure console only recognizes existing menu items??? still not working...
+            //bool wasUpdated = _repo.UpdateMenuItem(oldMenuItemName, newMenuItem);  
+            //if(wasUpdated)
+            //{
+            //    Console.WriteLine("Menu item was successfully updated");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Unable to update menu item...");
+            //}
         }
        
         private void DeleteExistingMenuItem()

@@ -10,7 +10,7 @@ namespace _02_Claims_Console
     {
         static void Main(string[] args)
         {
-            ClaimsUI ui = new ClaimsUI();
+            ClaimsUI2 ui = new ClaimsUI2();
             ui.Run();
         }
     }
