@@ -31,7 +31,7 @@ namespace _01_Cafe_Repository
             }
             return null;
         }
-        public bool UpdateExistingMenuItem(string originalMenuItem, MenuItem newMenuItemValues)
+        public bool UpdateMenuItem(string originalMenuItem, MenuItem newMenuItemValues)
         {
             MenuItem oldMenuItem = GetMenuItemByName(originalMenuItem);
             if (oldMenuItem != null)

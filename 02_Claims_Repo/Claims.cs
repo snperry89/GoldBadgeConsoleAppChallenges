@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace _02_Claims_Repo
 {
     /// POCO
-    public enum ClaimType { Car, Home, Theft}
-    //public DateTime DateOfIncident = new DateTime(int, int, int);  // dont understand datetime
+    public enum ClaimType { Car = 1, Home, Theft}
     public class Claims
     {
         public int ClaimID { get; set; }

@@ -15,14 +15,14 @@ namespace _01_Cafe_Tests
         public void Arrange()
         {
             _repo = new MenuRepository();
-            _menuItems = new MenuItem(2, "Tenderloin", "this is pork", 11, "bun, pork, mustard");
+            _menuItems = new MenuItem(2, "Tenderloin", "this is pork", 11.00m, "bun, pork, mustard");
             _repo.AddItemToMenu(_menuItems);
         }
 
         [TestMethod]
         public void AddItemToMenu_ShouldReturnTrue()
         {
-            MenuItem _items = new MenuItem(2, "This Little Piggy", "this is pork", 11, "bun, pork, mustard");
+            MenuItem _items = new MenuItem(2, "This Little Piggy", "this is pork", 11.00m, "bun, pork, mustard");
 
             bool addMenuItem = _repo.AddItemToMenu(_menuItems);
 
@@ -30,17 +30,31 @@ namespace _01_Cafe_Tests
         }
 
         [TestMethod]
-        public void UpdateExistingMenuItem()
+        public void UpdateExistingMenuItem_ShouldReturnNotEqual() //Does this test make sense???
         {
-            _repo.UpdateExistingMenuItem("This Little Piggy", new MenuItem(2, "This Little Piggy 2", "this is still pork", 12.50, "bun, pork, lettuce, tomatoe, mustard, mayo"));
+            //_repo.UpdateExistingMenuItem("This Little Piggy", new MenuItem(2, "This Little Piggy 2", "this is still pork", 12.50, "bun, pork, lettuce, tomatoe, mustard, mayo"));
+
+            MenuItem newMenuItem = new MenuItem(2, "This Little Piggy 2", "this is still pork", 12.50m, "bun, pork, lettuce, tomatoe, mustard, mayo");
+
+            bool updateResult = _repo.UpdateMenuItem("This Little Piggy", newMenuItem);
+
+            Assert.AreNotEqual(newMenuItem, updateResult);
         }
 
-        [TestMethod]
-        public void DeleteExistingMenuItem()
-        {
-            bool wasDeleted = _repo.DeleteExistingMenuItem("This Little Piggy");
+        //[DataTestMethod]
+        //public void DeleteExistingMenuItem_ShouldReturnTrue(string originalMenuItem, bool shouldDelete)
+        //{
+        //    bool wasDeleted = _repo.DeleteExistingMenuItem("This Little Piggy");
 
-            Assert.IsTrue(wasDeleted); ///works if isFalse, but shouldnt it be IsTrue
+        //    Assert.IsTrue(wasDeleted); ///works if isFalse, but shouldnt it be IsTrue
+        //}
+
+        [TestMethod]
+        public void DeleteMenuItem_ShouldReturnTrue()
+        {
+            bool deleteResult = _repo.DeleteExistingMenuItem(_menuItems.MealName);
+
+            Assert.IsTrue(deleteResult);
         }
 
         [TestMethod]

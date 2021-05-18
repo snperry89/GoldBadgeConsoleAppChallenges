@@ -55,6 +55,7 @@ namespace MenuItem_Console
         }
         private void CreateNewMenuItem()
         {
+           
             Console.Clear();
             MenuItem newMenuItem = new MenuItem();
             Console.WriteLine("What is the number for this menu item?");
@@ -64,12 +65,15 @@ namespace MenuItem_Console
             Console.WriteLine("What is the description for this menu item?");
             newMenuItem.Description = Console.ReadLine();
             Console.WriteLine("What is the price of this menu item?");
-            newMenuItem.Price = Convert.ToDouble(Console.ReadLine());
+            newMenuItem.Price = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("What are the ingredients in this menu item?" );
             newMenuItem.Ingredients = (Console.ReadLine());
+
+            _repo.AddItemToMenu(newMenuItem);
         }
 
         private void UpdateExistingMenuItem()
+            /// need to make so that console only recognizes existing menu items
         {
             Console.Clear();
             ViewAllMenuItems();
@@ -91,10 +95,21 @@ namespace MenuItem_Console
 
             Console.WriteLine("What is the new price for this item?");
             string priceAsString = Console.ReadLine();
-            double priceAsDouble = Convert.ToDouble(priceAsString);
-            newMenuItem.Price = priceAsDouble;
+            decimal priceAsDecimal = Convert.ToDecimal(priceAsString);
+            newMenuItem.Price = priceAsDecimal;
 
-            
+            Console.WriteLine("What are the new ingredients for this item?");
+            newMenuItem.Ingredients = Console.ReadLine();
+
+            bool wasUpdated = _repo.UpdateMenuItem(oldMenuItemName, newMenuItem);  // need to set equal to bool to make sure console only recognizes existing menu items??? still not working...
+            if(wasUpdated)
+            {
+                Console.WriteLine("Menu item was successfully updated");
+            }
+            else
+            {
+                Console.WriteLine("Unable to update menu item...");
+            }
         }
        
         private void DeleteExistingMenuItem()
@@ -124,18 +139,18 @@ namespace MenuItem_Console
             {
                 Console.WriteLine($"Menu Item Number: {item.MealNumber}");
                 Console.WriteLine($"Menu Item: {item.MealName}" );
-                Console.WriteLine($"Price: {item.Price}");
+                Console.WriteLine($"Price: ${item.Price}");
                 Console.WriteLine($"Description: {item.Description}");
-                Console.WriteLine($"Ingredients: {item.Ingredients}");
-                // do i need to display anything else here...check prompt???
+                Console.WriteLine($"Ingredients: {item.Ingredients}\n");
+                // do i need to display all of this??? check prompt
             }
         }
         private void SeedMenu()
         {
-            MenuItem First = new MenuItem(1, "FireStarter", "Too Hot to Handle", 4.20, "bun, beef, jalapeno, sriracha chili mayo");
-            MenuItem Second = new MenuItem(2, "This Little Piggy", "Pork, Pork, and More Pork", 5.50, "bun, pork tenderloin, pulled pork, bacon, bacon jam");
-            MenuItem Third = new MenuItem(3, "Chick Filet", "Why....just why?", 30.00, "bun, fried chicken tenders, filet mignon, A1 steak sauce");
-            MenuItem Fourth = new MenuItem(4, "The Bummer", "For Your Vegan Cousin", 0.50, "one un-buttered crouton");
+            MenuItem First = new MenuItem(1, "I Am The FireStarter", "Too Hot to Handle", 4.20m, "bun, beef, jalapeno-jack cheese, sriracha chili mayo, ghost peppers");
+            MenuItem Second = new MenuItem(2, "This Little Piggy", "Pork, Pork, and More Pork", 5.50m, "bun, pork tenderloin, pulled pork, bacon, bacon jam");
+            MenuItem Third = new MenuItem(3, "Chick Filet", "Why....Just Why?", 30.00m, "bun, fried chicken tenders, filet mignon, A1 steak sauce");
+            MenuItem Fourth = new MenuItem(4, "The Bummer", "For Your Vegan Cousin", 0.50m, "one un-buttered crouton");
 
             _repo.AddItemToMenu(First);
             _repo.AddItemToMenu(Second);

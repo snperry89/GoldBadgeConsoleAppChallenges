@@ -9,9 +9,11 @@ namespace _02_Claims_Repo
     public class ClaimsRepo // goal is to hold all CRUD
         //Repo acts as holder of data and manipulator of data
     {
-        private Queue<Claims> _listOfClaims = new Queue<Claims>();
-        //Create
-        public void AddClaim(Claims claim)
+        //private read only
+        Queue<Claims> _listOfClaims = new Queue<Claims>();
+        //_listOfClaims.Enqueue(Claims);
+        // Add
+        public void EnqueueClaim(Claims claim)
         {
             _listOfClaims.Enqueue(claim);
         }
@@ -20,6 +22,11 @@ namespace _02_Claims_Repo
         {
             return _listOfClaims;
         }
+        //Enqueue
+        //public void EnqueueClaim()
+        //{
+        //    Claims
+        //}
         //Update
         public bool UpdateClaim(int originalClaimID, Claims newClaim)
         {
