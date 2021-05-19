@@ -61,20 +61,35 @@ namespace _03_Badge_Console
             badge.BadgeID = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("What door does it need access to?");
-            badge.Doors.Add(Console.ReadLine());
+            string doors = Console.ReadLine();
+            badge.Doors = doors.Split(' ').ToList();
+            //_repo.CreateNewBadge();
+
+            //badge.Doors.Add(Console.ReadLine());
             //{
             //    return Console.ReadLine().Split(',').Select(badge.Doors).Sum();
             //}
-
-            Console.WriteLine("Do you need access to any other doors(y/n)?");
-            if (Console.ReadLine().ToLower() == "y")
+            bool continueLoop = true;
+            while (continueLoop)
             {
-                Console.WriteLine("What door does it need access to?");
-                badge.Doors.Add(Console.ReadLine());
-            }
-            else if (Console.ReadLine().ToLower() == "n")
-            {
-                Console.WriteLine("Press any key to continue");
+                Console.WriteLine("Do you need access to any other doors(y/n)?");
+                string input = Console.ReadLine().ToLower();
+                if (input == "y")
+                {
+                    Console.WriteLine("What door does it need access to?");
+                    badge.Doors.Add(Console.ReadLine());
+                }
+                else if (input == "n")
+                {
+                    continueLoop = false;
+                    Console.WriteLine("No additional access was granted");
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a valid input:");
+                }
             }
 
             _repo.CreateNewBadge(badge);
@@ -98,7 +113,17 @@ namespace _03_Badge_Console
 
             Console.Clear();
             Dictionary<int, List<string>> badgeDoors = _repo.GetBadges();
+            //KeyValuePair<int, List<string>> doorAccess; 
             Console.WriteLine("What is the badge number you would like to update?");
+            int badgeNum = Convert.ToInt32(Console.ReadLine());
+            Badge newBadgeNum = _repo.GetBadgeByBadgeID(badgeNum);
+
+            bool wasUpdated = _repo.UpdateDoors(badgeNum, newBadgeNum);
+            if (newBadgeNum != null)
+            {
+                Console.WriteLine($"Badge {badgeNum} has access to doors {badgeDoors.Values}");
+
+            }
 
 
         }
