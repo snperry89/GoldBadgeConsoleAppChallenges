@@ -48,6 +48,5 @@ namespace _02_Claims_Repo
                 return false;
             }
         }
-
     }
 }

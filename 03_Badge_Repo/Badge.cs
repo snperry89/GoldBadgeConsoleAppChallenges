@@ -9,13 +9,13 @@ namespace _03_Badge_Repo
     public class Badge
     {
         public int BadgeID { get; set; }
-        public List<doors> Doors { get; set; }
+        //public List<string> Doors { get; set; }
 
         public Badge() { }
-        public Badge(int badgeID, List<doors> doors )
+        public Badge(int badgeID /*List<string> doors*/ )
         {
             BadgeID = badgeID;
-            Doors = doors;
+            //Doors = doors;
         }
     }
 }

@@ -80,22 +80,24 @@ namespace _02_Claims_Console
 
             Console.WriteLine("Do you want to deal with this claim now(y/n)?");
             ///if y-dequeue  if n then back to the menu...
-            if (Console.ReadLine().ToLower() == "y")
+            string s = (Console.ReadLine().ToLower());
+            if (s == "y")
             {
                 _repo.DequeueClaim(nextClaim);
                 Console.WriteLine("The claim was successfully handled.");
             }
-            else if (Console.ReadLine().ToLower() == "n")
+            if (s == "n")
             {
-                _repo.DequeueClaim(nextClaim);
                 Console.WriteLine($"The claim will remain in the queue.");
-                Console.ReadKey();
-                ///why doesnt this option show up
+
             }
             else
             {
                 Console.WriteLine("Please enter a valid input.");
             }
+            
+            
+
         }
         private void AddNewClaim()
         {
