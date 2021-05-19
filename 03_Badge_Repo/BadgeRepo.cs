@@ -9,12 +9,13 @@ namespace _03_Badge_Repo
     public class BadgeRepo
     {
         ///stackoverflow.com/questions/17887407/dictionary-with-list-of-strings-as-value
-        private Dictionary<int, List<string>> badgeDoors = new Dictionary<int, List<string>>();
+        private Dictionary<int, List<string>> _badgeDoors = new Dictionary<int, List<string>>(); 
+
         public void Add(int badgeID, string _doors)
         {
-            if (this.badgeDoors.ContainsKey(badgeID))
+            if (this._badgeDoors.ContainsKey(badgeID))
             {
-                List<string> doorList = this.badgeDoors[badgeID];
+                List<string> doorList = this._badgeDoors[badgeID];
                 if (doorList.Contains(_doors) == false)
                 {
                     doorList.Add(_doors);
@@ -24,30 +25,45 @@ namespace _03_Badge_Repo
             {
                 List<string> doorList = new List<string>();
                 doorList.Add(_doors);
-                this.badgeDoors.Add(badgeID, doorList);
+                this._badgeDoors.Add(badgeID, doorList);
             }
         }
         //Create
-        public bool CreateNewBadge(Badge newBadgeID, List<string> _doors)
+        public bool CreateNewBadge(Badge newBadge)
         {
-            int startingCount = badgeDoors.Count;
-            badgeDoors.Add(Convert.ToInt32(newBadgeID), _doors);
-            bool wasAdded = (badgeDoors.Count > startingCount) ? true : false;
+            int startingCount = _badgeDoors.Count;
+            _badgeDoors.Add(newBadge.BadgeID, newBadge.Doors);
+            bool wasAdded = (_badgeDoors.Count > startingCount) ? true : false;
             return wasAdded;
         }
         //Read
         public Dictionary<int, List<string>> GetBadges()
         {
-            return badgeDoors;
+            return _badgeDoors;
         }
         //Read by value
+
+        //public List<string> GetBadgeByBadgeID(int badgeID)
+        //{
+        //    foreach (KeyValuePair<int, List<string>> doors in _badgeDoors)
+        //    {
+        //        if (doors.Key == badgeID)
+        //        {
+        //            return doors.Value;
+        //        }
+        //    }
+        //    return null;
+        //}
         public Badge GetBadgeByBadgeID(int badgeID)
         {
-            foreach (Badge newbadgeID in badgeDoors)
+            Badge tempBadge = new Badge();
+            foreach (KeyValuePair<int, List<string>> doors in _badgeDoors)
             {
-                if (newbadgeID.BadgeID == badgeID)
-                    {
-                    return newbadgeID;
+                if (doors.Key == badgeID)
+                {
+                    tempBadge.BadgeID = doors.Key;
+                    tempBadge.Doors = doors.Value;
+                    return tempBadge;
                 }
             }
             return null;
@@ -75,7 +91,7 @@ namespace _03_Badge_Repo
             }
             else
             {
-                badgeDoors.Remove(Convert.ToInt32(accessToDelete));
+                _badgeDoors.Remove(Convert.ToInt32(accessToDelete));
                 return true;
             }
         }
