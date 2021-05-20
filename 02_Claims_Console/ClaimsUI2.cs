@@ -53,15 +53,30 @@ namespace _02_Claims_Console
         {
             Console.Clear();
             Queue<Claims> allClaims = _repo.GetClaims();
+            /// formatting doesn't look right
+           
+            string headerSize = "{0,-10}{1,-8}{2,-30}{3,-10}{4,-18}{5,-15}{6,-10}";
+
+            Console.Write("\t");
+            Console.Write(headerSize, "Claim ID", "Type", "Description", "Amount", "Date Of Incident", "Date Of Claim", "Is Valid\n\n");
+            //Console.WriteLine($"Claim ID"  +
+            //        $"Claim Type"   +
+            //        $"Claim Description"  +
+            //        $"Claim Amount" +
+            //        $"Date Of Incident"  +
+            //        $"Date Of Claim"  +
+            //        $"Is Claim Valid");
             foreach (Claims claim in allClaims)
             {
-                Console.WriteLine($"Claim ID: {claim.ClaimID}\n" +
-                    $"Claim Type: {claim.TypeOfClaim}\n" +
-                    $"Claim Description: {claim.Description}\n" +
-                    $"Claim Amount: {claim.ClaimAmount}\n" +
-                    $"Date Of Incident: {claim.DateOfIncident.ToShortDateString()}\n" +
-                    $"Date Of Claim: {claim.DateOfClaim.ToShortDateString()}\n" +
-                    $"Is Claim Valid: {claim.IsValid}\n");
+                Console.Write("\t");
+                Console.Write(headerSize,
+                  $"{claim.ClaimID}", 
+                  $"{claim.TypeOfClaim}", 
+                  $"{claim.Description}", 
+                  $"${claim.ClaimAmount}", 
+                  $"{claim.DateOfIncident.ToShortDateString()}", 
+                  $"{claim.DateOfClaim.ToShortDateString()}", 
+                  $"{claim.IsValid}\n\n");
                 // look into .shortdatetostring more, removes hour/min/sec from DateTime
             }
         }
@@ -95,8 +110,8 @@ namespace _02_Claims_Console
             {
                 Console.WriteLine("Please enter a valid input.");
             }
-            
-            
+
+
 
         }
         private void AddNewClaim()

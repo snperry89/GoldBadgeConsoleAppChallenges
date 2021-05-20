@@ -51,11 +51,10 @@ namespace _03_Badge_Console
                 Console.Clear();
             }
         }
-        private void AddNewBadge()   //////Lost
+        private void AddNewBadge()
         {
             Console.Clear();
             Badge badge = new Badge();
-            //List<string> doors = new List<string>();  //unnecessary
 
             Console.WriteLine("Please enter the Badge ID: ");
             badge.BadgeID = Convert.ToInt32(Console.ReadLine());
@@ -64,7 +63,6 @@ namespace _03_Badge_Console
             string doors = Console.ReadLine();
             badge.Doors = doors.Split(' ').ToList();
             //_repo.CreateNewBadge();
-
             //badge.Doors.Add(Console.ReadLine());
             //{
             //    return Console.ReadLine().Split(',').Select(badge.Doors).Sum();
@@ -83,7 +81,6 @@ namespace _03_Badge_Console
                 {
                     continueLoop = false;
                     Console.WriteLine("No additional access was granted");
-                    Console.WriteLine("Press any key to continue");
                     Console.ReadKey();
                 }
                 else
@@ -94,7 +91,7 @@ namespace _03_Badge_Console
 
             _repo.CreateNewBadge(badge);
         }
-        private void EditBadge()  ///// Lost
+        private void EditBadge()  ///// completely and utterly LOST
         {
             //Console.Clear();
             //Dictionary<int, List<string>> badgeDoors = _repo.GetBadges();
@@ -119,13 +116,65 @@ namespace _03_Badge_Console
             Badge newBadgeNum = _repo.GetBadgeByBadgeID(badgeNum);
 
             bool wasUpdated = _repo.UpdateDoors(badgeNum, newBadgeNum);
+
             if (newBadgeNum != null)
             {
-                Console.WriteLine($"Badge {badgeNum} has access to doors {badgeDoors.Values}");
+                Console.WriteLine($"\nBadge {badgeNum} has access to doors: ");
+                foreach (KeyValuePair<int, List<string>> badge in badgeDoors)
+                {
+                    
+                    //foreach (string doors in badge.Value)
+                    foreach (string doors in badgeDoors[badgeNum])
+                    {
+                        if (badgeNum == badge.Key)
+                        {
+                            Console.WriteLine($"{ doors} \n");
+                        }
+                        else
+                        {
+                            //Console.WriteLine("Badge not recognized");
+                        }
+                    }
+                }
+                Console.WriteLine("What would you like to do?\n" +
+                        "1. Remove a door\n" +
+                        "2. Add a door");
+                string input = Console.ReadLine();
+                if (input == "1")
+                {
+                    Console.WriteLine("Which door would you like to remove");
+                    bool doorDeleted = _repo.DeleteDoors(Convert.ToInt32(Console.ReadLine()));
+                    if (doorDeleted)
+                    {
+                        Console.WriteLine("Door removed");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No action taken");
+                    }
+                    
 
+                }
+                //switch(input)
+                //{
+                //    case "1":
+                //        RemoveDoor();
+                //        break;
+                //    case "2":
+                //        AddDoor();
+                //        break;
+                //    default:
+                //        Console.WriteLine("Please enter a valid input");
+                //        break;
+                //}
+
+                ///this is where it gets foggy
+                //Console.WriteLine($"Badge {badgeNum} has access to doors ");
+                //foreach (KeyValuePair<int, List<string>> badge in badgeDoors) 
+                //{
+                //    Console.WriteLine(door);
+                //}
             }
-
-
         }
         private void ViewBadges()
         {
@@ -135,9 +184,9 @@ namespace _03_Badge_Console
             {
                 Console.WriteLine($"Badge ID: {badge.Key}\n" +
                 $"Door Access: ");
-                foreach (string door in badge.Value)
+                foreach (string doors in badge.Value)
                 {
-                    Console.Write(door + " ");
+                    Console.Write(doors + " ");
                 }
                 Console.WriteLine("\n");
             }
@@ -151,6 +200,7 @@ namespace _03_Badge_Console
             _repo.CreateNewBadge(firstBadge);
             _repo.CreateNewBadge(secondBadge);
             _repo.CreateNewBadge(thirdBadge);
+
 
         }
     }

@@ -13,9 +13,9 @@ namespace _03_Badge_Repo
 
         public void Add(int badgeID, string _doors)
         {
-            if (this._badgeDoors.ContainsKey(badgeID))
+            if (_badgeDoors.ContainsKey(badgeID))
             {
-                List<string> doorList = this._badgeDoors[badgeID];
+                List<string> doorList = _badgeDoors[badgeID];
                 if (doorList.Contains(_doors) == false)
                 {
                     doorList.Add(_doors);
@@ -25,7 +25,7 @@ namespace _03_Badge_Repo
             {
                 List<string> doorList = new List<string>();
                 doorList.Add(_doors);
-                this._badgeDoors.Add(badgeID, doorList);
+                _badgeDoors.Add(badgeID, doorList);
             }
         }
         //Create

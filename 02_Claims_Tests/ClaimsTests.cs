@@ -51,5 +51,19 @@ namespace _02_Claims_Tests
             Assert.IsTrue(directoryHasClaim);
 
         }
+
+        [TestMethod]
+        public void PeekNext_ShouldReturnNextClaim()
+        {
+            Claims claim = new Claims();
+            ClaimsRepo2 repo = new ClaimsRepo2();
+            repo.CreateNewClaim(claim);
+
+            Queue<Claims> newQueue = new Queue<Claims>();
+            newQueue.Enqueue(repo.PeekNextClaim());
+            bool hasClaim = newQueue.Contains(claim);
+
+            Assert.IsTrue(hasClaim);
+        }
     }
 }
