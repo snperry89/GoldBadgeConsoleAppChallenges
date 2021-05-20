@@ -3,3 +3,4 @@ D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\01_Ca
 D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\01_Cafe_Repo\obj\Debug\01_Cafe_Repo.csproj.CoreCompileInputs.cache
 D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\01_Cafe_Repo\obj\Debug\01_Cafe_Repo.dll
 D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\01_Cafe_Repo\obj\Debug\01_Cafe_Repo.pdb
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\01_Cafe_Repo\obj\Debug\01_Cafe_Repo.csprojAssemblyReference.cache

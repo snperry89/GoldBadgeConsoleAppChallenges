@@ -59,12 +59,14 @@ namespace _01_Cafe_Console
             MenuItem newMenuItem = new MenuItem();
             Console.WriteLine("What is the number for this menu item?");
             newMenuItem.MealNumber = Convert.ToInt32(Console.ReadLine());
+            // Stretch = Account for user input error if not an int
             Console.WriteLine("What is the name for this menu item?");
             newMenuItem.MealName = Console.ReadLine();
             Console.WriteLine("What is the description for this menu item?");
             newMenuItem.Description = Console.ReadLine();
             Console.WriteLine("What is the price of this menu item?");
             newMenuItem.Price = Convert.ToDecimal(Console.ReadLine());
+            // Stretch = Account for user input error if not decimal
             Console.WriteLine("What are the ingredients in this menu item?");
             newMenuItem.Ingredients = (Console.ReadLine());
 

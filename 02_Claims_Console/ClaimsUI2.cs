@@ -54,6 +54,7 @@ namespace _02_Claims_Console
             Console.Clear();
             Queue<Claims> allClaims = _repo.GetClaims();
             /// formatting doesn't look right
+            /// need to look more into formatting columns/tables???
            
             string headerSize = "{0,-10}{1,-8}{2,-30}{3,-10}{4,-18}{5,-15}{6,-10}";
 
@@ -110,9 +111,6 @@ namespace _02_Claims_Console
             {
                 Console.WriteLine("Please enter a valid input.");
             }
-
-
-
         }
         private void AddNewClaim()
         {
