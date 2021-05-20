@@ -9,7 +9,7 @@ namespace MenuItem_Console
 {
     class Cafe
     {
-        static void Main(string[] args) // [] after 'string' ???
+        static void Main(string[] args) 
         {
             CafeUI ui = new CafeUI();
             ui.Run();
