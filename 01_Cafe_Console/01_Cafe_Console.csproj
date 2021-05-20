@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F320050C-0092-4047-BFA2-DAC7CE97F4DA}</ProjectGuid>
+    <ProjectGuid>{F13FE4BF-AC1C-4D63-9E58-0EBDFEE45BE1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>_01_Cafe_Console</RootNamespace>
+    <AssemblyName>01_Cafe_Console</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>MenuItem_Console.Cafe</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\01_Cafe_Repository\01_Cafe_Repository.csproj">
-      <Project>{E62C6F9D-F3A6-4A37-A9A2-EDE35FCC13EF}</Project>
-      <Name>01_Cafe_Repository</Name>
+    <ProjectReference Include="..\01_Cafe_Repo\01_Cafe_Repo.csproj">
+      <Project>{0AA153AC-715E-42AE-8B6A-96461AE99A7F}</Project>
+      <Name>01_Cafe_Repo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

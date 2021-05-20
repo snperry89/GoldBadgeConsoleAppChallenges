@@ -4,3 +4,9 @@ C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\03_Badge_Repo\
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\03_Badge_Repo\obj\Debug\03_Badge_Repo.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\03_Badge_Repo\obj\Debug\03_Badge_Repo.dll
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\03_Badge_Repo\obj\Debug\03_Badge_Repo.pdb
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\03_Badge_Repo\bin\Debug\03_Badge_Repo.dll
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\03_Badge_Repo\bin\Debug\03_Badge_Repo.pdb
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\03_Badge_Repo\obj\Debug\03_Badge_Repo.csprojAssemblyReference.cache
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\03_Badge_Repo\obj\Debug\03_Badge_Repo.csproj.CoreCompileInputs.cache
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\03_Badge_Repo\obj\Debug\03_Badge_Repo.dll
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\03_Badge_Repo\obj\Debug\03_Badge_Repo.pdb

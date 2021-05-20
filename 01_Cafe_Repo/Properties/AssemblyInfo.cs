@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("01_Cafe_Repository")]
+[assembly: AssemblyTitle("01_Cafe_Repo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("01_Cafe_Repository")]
+[assembly: AssemblyProduct("01_Cafe_Repo")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e62c6f9d-f3a6-4a37-a9a2-ede35fcc13ef")]
+[assembly: Guid("0aa153ac-715e-42ae-8b6a-96461ae99a7f")]
 
 // Version information for an assembly consists of the following four values:
 //

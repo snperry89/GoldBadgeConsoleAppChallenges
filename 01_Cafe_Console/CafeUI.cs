@@ -1,11 +1,11 @@
-﻿using _01_Cafe_Repository;
+﻿using _01_Cafe_Repo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MenuItem_Console
+namespace _01_Cafe_Console
 {
     class CafeUI
     {
@@ -15,7 +15,7 @@ namespace MenuItem_Console
             SeedMenu();
             Menu();
         }
-        private void Menu() 
+        private void Menu()
         {
             bool keepRunning = true;
             while (keepRunning)
@@ -55,7 +55,7 @@ namespace MenuItem_Console
         }
         private void CreateNewMenuItem()
         {
-           
+
             Console.Clear();
             MenuItem newMenuItem = new MenuItem();
             Console.WriteLine("What is the number for this menu item?");
@@ -66,7 +66,7 @@ namespace MenuItem_Console
             newMenuItem.Description = Console.ReadLine();
             Console.WriteLine("What is the price of this menu item?");
             newMenuItem.Price = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("What are the ingredients in this menu item?" );
+            Console.WriteLine("What are the ingredients in this menu item?");
             newMenuItem.Ingredients = (Console.ReadLine());
 
             _repo.AddItemToMenu(newMenuItem);
@@ -113,14 +113,14 @@ namespace MenuItem_Console
                 {
                     Console.WriteLine("Unable to update menu item...");
                 }
-                
+
             }
             else
             {
                 Console.WriteLine("Please enter a valid input");
             }
         }
-       
+
         private void DeleteExistingMenuItem()
         {
             Console.Clear();
@@ -145,7 +145,7 @@ namespace MenuItem_Console
             foreach (MenuItem item in allMenuItems)
             {
                 Console.WriteLine($"Menu Item Number: {item.MealNumber}");
-                Console.WriteLine($"Menu Item: {item.MealName}" );
+                Console.WriteLine($"Menu Item: {item.MealName}");
                 Console.WriteLine($"Price: ${item.Price}");
                 Console.WriteLine($"Description: {item.Description}");
                 Console.WriteLine($"Ingredients: {item.Ingredients}\n");
@@ -163,6 +163,5 @@ namespace MenuItem_Console
             _repo.AddItemToMenu(Third);
             _repo.AddItemToMenu(Fourth);
         }
-
     }
 }
