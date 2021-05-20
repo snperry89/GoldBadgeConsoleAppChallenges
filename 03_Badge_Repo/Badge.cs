@@ -10,7 +10,6 @@ namespace _03_Badge_Repo
     {
         public int BadgeID { get; set; }
         public List<string> Doors { get; set; }
-
         public Badge() { }
         public Badge(int badgeID, List<string> _doors)
         {

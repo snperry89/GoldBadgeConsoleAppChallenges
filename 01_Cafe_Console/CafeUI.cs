@@ -55,7 +55,6 @@ namespace _01_Cafe_Console
         }
         private void CreateNewMenuItem()
         {
-
             Console.Clear();
             MenuItem newMenuItem = new MenuItem();
             Console.WriteLine("What is the number for this menu item?");
@@ -71,7 +70,6 @@ namespace _01_Cafe_Console
 
             _repo.AddItemToMenu(newMenuItem);
         }
-
         private void UpdateExistingMenuItem() // struggling to only make console recognize existing items
         {
             Console.Clear();
@@ -113,14 +111,12 @@ namespace _01_Cafe_Console
                 {
                     Console.WriteLine("Unable to update menu item...");
                 }
-
             }
             else
             {
                 Console.WriteLine("Please enter a valid input");
             }
         }
-
         private void DeleteExistingMenuItem()
         {
             Console.Clear();
@@ -136,7 +132,6 @@ namespace _01_Cafe_Console
             {
                 Console.WriteLine("The menu item could not be deleted.");
             }
-
         }
         private void ViewAllMenuItems()
         {

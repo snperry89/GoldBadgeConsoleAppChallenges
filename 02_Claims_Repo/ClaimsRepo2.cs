@@ -9,7 +9,6 @@ namespace _02_Claims_Repo
     public class ClaimsRepo2
     {
         private readonly Queue<Claims> _claims = new Queue<Claims>();
-        
         //Create
         public bool CreateNewClaim(Claims newClaim)
         {
@@ -23,16 +22,14 @@ namespace _02_Claims_Repo
         {
             return _claims;
         }
-        //Update
+        //No Update Method necessary in prompt???
         
-        //method to peek in queue
+        // need method to peek in queue
         public Claims PeekNextClaim()
         {
             Claims claimToPeek = _claims.Peek(); 
 
-            return claimToPeek;
-            
-            ///return claim to be displayed takecarenextclaim()
+            return claimToPeek;       
         }
         //Delete AKA next claim
         public bool DequeueClaim(Claims nextClaim)

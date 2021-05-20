@@ -8,7 +8,7 @@ namespace _02_Claims_Tests
     [TestClass]
     public class ClaimsTests
     {
-        //[TestInitialize]      //how to do this???
+        //[TestInitialize]      //how to properly set up initialize???
         //public void Arrange()
         //{
         //    Claims claim = new Claims();

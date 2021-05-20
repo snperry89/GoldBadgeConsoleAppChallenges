@@ -8,7 +8,7 @@ namespace _03_Badge_Repo
 {
     public class BadgeRepo
     {
-        ///stackoverflow.com/questions/17887407/dictionary-with-list-of-strings-as-value
+        /// look further into stackoverflow.com/questions/17887407/dictionary-with-list-of-strings-as-value
         private Dictionary<int, List<string>> _badgeDoors = new Dictionary<int, List<string>>(); 
 
         public void Add(int badgeID, string doors)
@@ -28,8 +28,6 @@ namespace _03_Badge_Repo
                 _badgeDoors.Add(badgeID, doorList);
             }
         }
-
-        // Need RemoveMethod to remove door access for badge
         public void Remove(int badgeID, string doors)
         {
             if (_badgeDoors.ContainsKey(badgeID))
@@ -44,11 +42,8 @@ namespace _03_Badge_Repo
             {
                 List<string> doorList = new List<string>();
                 doorList.Remove(doors);
-                //_badgeDoors.Remove(badgeID, doorList);
             }
         }
-
-        ///
         //Create
         public bool CreateNewBadge(Badge newBadge)
         {
