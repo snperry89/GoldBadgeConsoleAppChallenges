@@ -28,6 +28,27 @@ namespace _03_Badge_Repo
                 _badgeDoors.Add(badgeID, doorList);
             }
         }
+
+        // Need RemoveMethod to remove door access for badge
+        public void Remove(int badgeID, string _doors)
+        {
+            if (_badgeDoors.ContainsKey(badgeID))
+            {
+                List<string> doorList = _badgeDoors[badgeID];
+                if (doorList.Contains(_doors) == true)
+                {
+                    doorList.Remove(_doors);
+                }
+            }
+            else
+            {
+                List<string> doorList = new List<string>();
+                doorList.Remove(_doors);
+                //_badgeDoors.Remove(badgeID, doorList);
+            }
+        }
+
+        ///
         //Create
         public bool CreateNewBadge(Badge newBadge)
         {
