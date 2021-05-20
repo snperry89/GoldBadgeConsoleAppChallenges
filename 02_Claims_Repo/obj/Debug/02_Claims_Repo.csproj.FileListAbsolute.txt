@@ -4,3 +4,9 @@ C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Repo
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Repo\obj\Debug\02_Claims_Repo.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Repo\obj\Debug\02_Claims_Repo.dll
 C:\Users\Administrator\source\repos\GoldBadgeConsoleAppChallenges\02_Claims_Repo\obj\Debug\02_Claims_Repo.pdb
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\02_Claims_Repo\bin\Debug\02_Claims_Repo.dll
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\02_Claims_Repo\bin\Debug\02_Claims_Repo.pdb
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\02_Claims_Repo\obj\Debug\02_Claims_Repo.csprojAssemblyReference.cache
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\02_Claims_Repo\obj\Debug\02_Claims_Repo.csproj.CoreCompileInputs.cache
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\02_Claims_Repo\obj\Debug\02_Claims_Repo.dll
+D:\ElevenFiftyProjects\GoldBadgeConsoleFinal\GoldBadgeConsoleAppChallenges\02_Claims_Repo\obj\Debug\02_Claims_Repo.pdb

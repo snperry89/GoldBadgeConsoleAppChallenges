@@ -1,4 +1,4 @@
-﻿using _01_Cafe_Repository;
+﻿using _01_Cafe_Repo;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
