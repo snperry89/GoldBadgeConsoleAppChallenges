@@ -11,29 +11,30 @@ namespace _03_Badge_Console
     class BadgeUI
     {
         private BadgeRepo _repo = new BadgeRepo();
-        public void DisplayAccess()
-        {
-            Dictionary<int, List<string>> badgeDoors = _repo.GetBadges();
-            int badgeNum = Convert.ToInt32(Console.ReadLine());
-            Badge newBadgeNum = _repo.GetBadgeByBadgeID(badgeNum);
-            Console.WriteLine($"\nBadge {badgeNum} has access to doors: ");
-            foreach (KeyValuePair<int, List<string>> badge in badgeDoors)
-            {
+        /// tried to employ following helper line 220
+        //public void DisplayAccess()
+        //{
+        //    Dictionary<int, List<string>> badgeDoors = _repo.GetBadges();
+        //    int badgeNum = Convert.ToInt32(Console.ReadLine());
+        //    Badge newBadgeNum = _repo.GetBadgeByBadgeID(badgeNum);
+        //    Console.WriteLine($"\nBadge {badgeNum} has access to doors: ");
+        //    foreach (KeyValuePair<int, List<string>> badge in badgeDoors)
+        //    {
 
-                //foreach (string doors in badge.Value)
-                foreach (string doors in badgeDoors[badgeNum])
-                {
-                    if (badgeNum == badge.Key)
-                    {
-                        Console.WriteLine($"{ doors} \n");
-                    }
-                    else
-                    {
-                        //Console.WriteLine("Badge not recognized");
-                    }
-                }
-            }
-        }
+        //        //foreach (string doors in badge.Value)
+        //        foreach (string doors in badgeDoors[badgeNum])
+        //        {
+        //            if (badgeNum == badge.Key)
+        //            {
+        //                Console.WriteLine($"{ doors} \n");
+        //            }
+        //            else
+        //            {
+        //                //Console.WriteLine("Badge not recognized");
+        //            }
+        //        }
+        //    }
+        //}
         public void Run()
         {
             SeedMenu();
@@ -216,7 +217,7 @@ namespace _03_Badge_Console
 
                     // need to make below output show all doors that badge has access to
                     Console.WriteLine($"\nBadge {badgeNum} now has access to door: {addDoor}\n");
-                    DisplayAccess();
+                    //DisplayAccess();
                     Console.WriteLine($"\nBadge {badgeNum} has access to doors: ");
                     foreach (KeyValuePair<int, List<string>> badge in badgeDoors)
                     {

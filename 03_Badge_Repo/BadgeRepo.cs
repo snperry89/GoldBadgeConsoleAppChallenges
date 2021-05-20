@@ -11,39 +11,39 @@ namespace _03_Badge_Repo
         ///stackoverflow.com/questions/17887407/dictionary-with-list-of-strings-as-value
         private Dictionary<int, List<string>> _badgeDoors = new Dictionary<int, List<string>>(); 
 
-        public void Add(int badgeID, string _doors)
+        public void Add(int badgeID, string doors)
         {
             if (_badgeDoors.ContainsKey(badgeID))
             {
                 List<string> doorList = _badgeDoors[badgeID];
-                if (doorList.Contains(_doors) == false)
+                if (doorList.Contains(doors) == false)
                 {
-                    doorList.Add(_doors);
+                    doorList.Add(doors);
                 }
             }
             else
             {
                 List<string> doorList = new List<string>();
-                doorList.Add(_doors);
+                doorList.Add(doors);
                 _badgeDoors.Add(badgeID, doorList);
             }
         }
 
         // Need RemoveMethod to remove door access for badge
-        public void Remove(int badgeID, string _doors)
+        public void Remove(int badgeID, string doors)
         {
             if (_badgeDoors.ContainsKey(badgeID))
             {
                 List<string> doorList = _badgeDoors[badgeID];
-                if (doorList.Contains(_doors) == true)
+                if (doorList.Contains(doors) == true)
                 {
-                    doorList.Remove(_doors);
+                    doorList.Remove(doors);
                 }
             }
             else
             {
                 List<string> doorList = new List<string>();
-                doorList.Remove(_doors);
+                doorList.Remove(doors);
                 //_badgeDoors.Remove(badgeID, doorList);
             }
         }
